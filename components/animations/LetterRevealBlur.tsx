@@ -21,6 +21,7 @@ interface LetterRevealBlurProps {
   ease?: string;
   animateOnce?: boolean;
   triggerStart?: string;
+  style?: React.CSSProperties;
 }
 
 export default function LetterRevealBlur({
