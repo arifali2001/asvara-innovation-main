@@ -5,16 +5,11 @@ import { gsap } from "gsap";
 import Link from "next/link";
 import Image from "next/image";
 import FadeIn from "@/components/animations/FadeIn";
-
-const navLinks = [
-  { name: "Home", href: "#" },
-  { name: "Innovations", href: "#" },
-  { name: "Pricing", href: "#" },
-  { name: "Blogs", href: "#" },
-  { name: "About", href: "#" },
-];
+import { content } from "@/config/content";
 
 export default function DynamicNavbar() {
+  const { navbar, contact, brand } = content;
+
   const [isOpen, setIsOpen] = useState(false);
 
   const containerRef = useRef<HTMLDivElement>(null);
@@ -235,24 +230,21 @@ export default function DynamicNavbar() {
             className="absolute inset-0 flex items-center justify-between px-2 w-full h-full"
           >
             <div className="hidden md:flex items-center gap-8 pl-6">
-              <Link
-                href="#"
-                className="nav-pill-item text-xs font-medium text-[#5a5a5a] hover:text-[#8b7355] transition-colors uppercase tracking-wider"
-              >
-                Home
-              </Link>
-              <Link
-                href="#"
-                className="nav-pill-item text-xs font-medium text-[#5a5a5a] hover:text-[#8b7355] transition-colors uppercase tracking-wider"
-              >
-                Innovations
-              </Link>
+              {navbar.links.slice(0, 2).map((link) => (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  className="nav-pill-item text-xs font-medium text-[#5a5a5a] hover:text-[#8b7355] transition-colors uppercase tracking-wider"
+                >
+                  {link.name}
+                </Link>
+              ))}
             </div>
 
             <div className="nav-pill-item absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center gap-2 pointer-events-none select-none">
               <Image
                 src="/logo-hex.svg"
-                alt="Asvara Logo"
+                alt={brand.logoAlt}
                 width={24}
                 height={24}
                 className="w-6 h-6 object-contain"
@@ -261,7 +253,7 @@ export default function DynamicNavbar() {
                 className="font-bold text-lg tracking-tight text-[#292929]"
                 style={{ fontFamily: "var(--font-primary)" }}
               >
-                Asvara
+                {brand.name}
               </span>
             </div>
 
@@ -286,7 +278,7 @@ export default function DynamicNavbar() {
                 <div className="w-10 h-10 rounded-full flex items-center justify-center">
                   <Image
                     src="/logo-hex.svg"
-                    alt="Asvara Logo"
+                    alt={brand.logoAlt}
                     width={20}
                     height={20}
                     className="w-5 h-5 object-contain"
@@ -296,7 +288,7 @@ export default function DynamicNavbar() {
                   className="font-bold text-xl md:text-2xl text-[#292929]"
                   style={{ fontFamily: "var(--font-primary)" }}
                 >
-                  Asvara
+                  {brand.name}
                 </span>
               </div>
 
@@ -325,7 +317,7 @@ export default function DynamicNavbar() {
                 <span className="menu-item-left text-[10px] font-bold text-[#a8a6a3] uppercase tracking-wider mb-2">
                   Directory
                 </span>
-                {navLinks.map((link) => (
+                {navbar.links.map((link) => (
                   <Link
                     key={link.name}
                     href={link.href}
@@ -349,18 +341,18 @@ export default function DynamicNavbar() {
                         Contact
                       </span>
                       <a
-                        href="mailto:hello@asvara.in"
+                        href={`mailto:${content.footer.contact.email}`} // Using footer contact email for consistency
                         className="font-mono text-[#292929] hover:underline"
                       >
-                        hello@asvara.in
+                        {content.footer.contact.email}
                       </a>
                     </div>
                     <div className="text-right">
                       <a
-                        href="tel:+919876543210"
+                        href={`tel:${content.footer.contact.phone.replace(/\s/g, "")}`}
                         className="font-mono text-[#292929] hover:underline block"
                       >
-                        +91 987 654 3210
+                        {content.footer.contact.phone}
                       </a>
                     </div>
                   </div>

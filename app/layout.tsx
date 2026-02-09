@@ -1,11 +1,28 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Cormorant_Garamond, Poppins, Inter } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "@/components/animations/LenisScroll";
-import PageLoader from "@/components/animations/PageLoader";
 import CustomCursor from "@/components/animations/CustomCursor";
 
-const inter = Inter({ subsets: ["latin"] });
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-cormorant",
+  display: "swap",
+});
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600"],
+  variable: "--font-poppins",
+  display: "swap",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Asvara Innovation",
@@ -22,7 +39,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+      <body
+        className={`${cormorant.variable} ${poppins.variable} ${inter.variable} font-sans antialiased`}
+      >
         <CustomCursor />
         <SmoothScroll />
         {children}
