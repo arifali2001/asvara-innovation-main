@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import Link from "next/link";
-import Image from "next/image"; // Import Image component
+import Image from "next/image";
 import FadeIn from "@/components/animations/FadeIn";
 
 const navLinks = [
@@ -139,9 +139,6 @@ export default function DynamicNavbar() {
   const closeMenu = () => {
     isAnimating.current = true;
 
-    const currentWidth = gsap.getProperty(containerRef.current, "width");
-    const currentHeight = gsap.getProperty(containerRef.current, "height");
-
     const tl = gsap.timeline({
       onComplete: () => {
         setIsOpen(false);
@@ -177,7 +174,7 @@ export default function DynamicNavbar() {
       containerRef.current,
       {
         width: targetWidth,
-        height: "70px",
+        height: "54px",
         borderRadius: "100px",
         duration: 0.8,
         ease: "power3.inOut",
@@ -224,10 +221,10 @@ export default function DynamicNavbar() {
       >
         <div
           ref={containerRef}
-          className="bg-[#fafaf9] border border-[#d4d2d0] shadow-[0_20px_40px_-10px_rgba(0,0,0,0.1)] overflow-hidden relative transition-shadow hover:shadow-[0_25px_50px_-10px_rgba(139,115,85,0.15)]"
+          className="bg-[#fafaf9] border border-[#d4d2d0] shadow-[0_10px_30px_-5px_rgba(0,0,0,0.05)] overflow-hidden relative transition-shadow hover:shadow-[0_20px_40px_-10px_rgba(139,115,85,0.15)]"
           style={{
             width: "550px",
-            height: "70px",
+            height: "54px",
             borderRadius: "100px",
             maxWidth: "92vw",
             willChange: "width, height, borderRadius",
@@ -235,18 +232,18 @@ export default function DynamicNavbar() {
         >
           <div
             ref={collapsedRef}
-            className="absolute inset-0 flex items-center justify-between px-3 w-full h-full"
+            className="absolute inset-0 flex items-center justify-between px-2 w-full h-full"
           >
-            <div className="hidden md:flex items-center gap-8 pl-8">
+            <div className="hidden md:flex items-center gap-8 pl-6">
               <Link
                 href="#"
-                className="nav-pill-item text-sm font-medium text-[#5a5a5a] hover:text-[#8b7355] transition-colors"
+                className="nav-pill-item text-xs font-medium text-[#5a5a5a] hover:text-[#8b7355] transition-colors uppercase tracking-wider"
               >
                 Home
               </Link>
               <Link
                 href="#"
-                className="nav-pill-item text-sm font-medium text-[#5a5a5a] hover:text-[#8b7355] transition-colors"
+                className="nav-pill-item text-xs font-medium text-[#5a5a5a] hover:text-[#8b7355] transition-colors uppercase tracking-wider"
               >
                 Innovations
               </Link>
@@ -256,9 +253,9 @@ export default function DynamicNavbar() {
               <Image
                 src="/logo-hex.svg"
                 alt="Asvara Logo"
-                width={28}
-                height={28}
-                className="w-7 h-7 object-contain"
+                width={24}
+                height={24}
+                className="w-6 h-6 object-contain"
               />
               <span
                 className="font-bold text-lg tracking-tight text-[#292929]"
@@ -268,14 +265,14 @@ export default function DynamicNavbar() {
               </span>
             </div>
 
-            <div className="nav-pill-item ml-auto pr-1">
+            <div className="nav-pill-item ml-auto">
               <button
                 onClick={toggleMenu}
-                className="w-12 h-12 rounded-full bg-[#ebe9e7] hover:bg-[#e1dfdd] flex flex-col items-center justify-center gap-[5px] transition-colors cursor-none group active:scale-95"
+                className="w-10 h-10 rounded-full bg-[#ebe9e7] hover:bg-[#e1dfdd] flex flex-col items-center justify-center gap-[4px] transition-colors cursor-none group active:scale-95"
               >
-                <span className="w-5 h-[1.5px] bg-[#292929] rounded-full transition-all duration-300 group-hover:w-6"></span>
-                <span className="w-5 h-[1.5px] bg-[#292929] rounded-full transition-all duration-300 group-hover:w-4"></span>
-                <span className="w-5 h-[1.5px] bg-[#292929] rounded-full transition-all duration-300 group-hover:w-6"></span>
+                <span className="w-4 h-[1.5px] bg-[#292929] rounded-full transition-all duration-300 group-hover:w-5"></span>
+                <span className="w-4 h-[1.5px] bg-[#292929] rounded-full transition-all duration-300 group-hover:w-3"></span>
+                <span className="w-4 h-[1.5px] bg-[#292929] rounded-full transition-all duration-300 group-hover:w-5"></span>
               </button>
             </div>
           </div>
