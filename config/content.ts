@@ -289,4 +289,251 @@ export const content = {
       btnSecondary: "Join Our Team",
     },
   },
+
+  innovations: {
+    hero: {
+      label: "Our Suite",
+      title: "Innovations",
+      subtext:
+        "Explore our latest technological breakthroughs and discover how we're revolutionizing the legal industry through AI-powered solutions.",
+    },
+    items: [
+      {
+        id: "01",
+        title: "PleadSmart",
+        category: "Legal Tech",
+        description:
+          "Your On-Demand AI Legal Assistant for research, drafting, and argument building.",
+        image: "/products/pleadsmart-illustration.png",
+        href: "/innovations/pleadsmart",
+        readTime: "10 min read",
+        date: "2025-07-01",
+      },
+      {
+        id: "02",
+        title: "DocBare",
+        category: "Innovation",
+        description:
+          "AI-Powered Contract & Draft Analyzer for clause-by-clause legal review.",
+        image: "/products/docbare-illustration.png",
+        href: "/innovations/docbare",
+        readTime: "5 min read",
+        date: "2025-07-01",
+      },
+      {
+        id: "03",
+        title: "AI Court Room",
+        category: "Simulation",
+        description:
+          "A Virtual Courtroom to Simulate Real Trials, Test Arguments, Predict Outcomes, and Resolve Disputes.",
+        image: "/products/aicourt-illustration.png",
+        href: "/innovations/aicourt",
+        readTime: "15 min read",
+        date: "2025-07-01",
+      },
+    ],
+    pages: {
+      pleadsmart: {
+        hero: {
+          label: "Legal Tech",
+          title: "PleadSmart",
+          subtitle: "Your On-Demand AI Legal Assistant",
+          description:
+            "PleadSmart automates a significant portion of an advocate's workflow — everything short of physically appearing in court.",
+          image: "/products/pleadsmart-illustration.png",
+        },
+        features: [
+          "Understand and analyse the facts of a legal matter",
+          "Instantly retrieve and summarize relevant judgments",
+          "Identify favourable precedents based on fact patterns",
+          "Draft tailored legal arguments, notices, contracts, and even plaints",
+        ],
+        sections: [
+          {
+            title: "What is PleadSmart?",
+            content:
+              "PleadSmart is Asvara's AI-powered legal assistant designed to automate and enhance the core functions of legal research, drafting, and argument building. Built to serve lawyers, law students, in-house legal teams, and even individuals seeking basic legal support, PleadSmart acts like a reliable associate advocate who's always available, always prepared, and never overwhelmed. In an ecosystem where legal professionals often face time pressure, fragmented resources, and repetitive drafting tasks, PleadSmart fills the critical gap—offering instant access to case law, legal reasoning, and document creation, all through a natural, conversational interface.",
+          },
+          {
+            title: "How It Works",
+            content:
+              "At its core, PleadSmart is a smart legal chatbot capable of understanding complex legal questions posed in plain language. Users can describe a legal issue or set of facts, and PleadSmart will instantly retrieve and summarize relevant judgments from Indian courts. Unlike traditional keyword-based search tools that require legal expertise to use effectively, PleadSmart understands the intent and factual context behind a query. This means it not only finds judgments with matching legal issues but also prioritizes those with similar fact patterns and favorable outcomes.",
+          },
+          {
+            title: "Drafting & Document Generation",
+            content:
+              "But PleadSmart goes beyond research—it is also an intelligent drafting engine. It can generate notices, legal opinions, arguments, contracts, and even full plaints based on the facts provided. A user can simply input the matter—whether it's a tenancy dispute, a contract breach, or a defamation claim—and PleadSmart will produce a first draft that is structurally sound, legally accurate, and tailored to the jurisdiction. This is particularly valuable for solo practitioners, junior advocates, or corporate legal teams managing high volumes of repetitive work.",
+          },
+          {
+            title: "Argument Building & Counterarguments",
+            content:
+              "One of the most innovative features of PleadSmart is its ability to simulate argument-building. A user can test the strength of a legal position by asking the system to generate counterarguments, helping them anticipate weaknesses before presenting their case in court. This back-and-forth interaction makes PleadSmart a virtual sparring partner, enabling users to refine their pleadings and prepare more persuasively.",
+          },
+          {
+            title: "For Legal Education",
+            content:
+              "PleadSmart also caters to legal educators and students by functioning as an interactive learning tool. It explains legal doctrines in clear terms, cites relevant authorities, and can even quiz users or simulate exam-style questions to reinforce learning. For institutions and legal training academies, it offers a scalable way to standardize legal learning while encouraging practical application.",
+          },
+          {
+            title: "Why PleadSmart?",
+            content:
+              "In a profession where clarity, speed, and accuracy are paramount, PleadSmart delivers all three. It doesn't replace the lawyer—it makes the lawyer faster, sharper, and better equipped. With its ability to handle complex tasks like judgment analysis, document generation, and legal strategy simulation, PleadSmart represents a major leap forward in the use of AI for the Indian legal sector. It embodies Asvara's mission to place a 'Legal Eagle on Board' for every legal professional.",
+          },
+        ],
+      },
+      aicourt: {
+        hero: {
+          label: "Simulation",
+          title: "AI Court Room",
+          subtitle: "Simulate. Predict. Resolve.",
+          description:
+            "A Virtual Courtroom to Simulate Real Trials, Test Arguments, Predict Outcomes — and Resolve Disputes.",
+          image: "/products/aicourt-illustration.png",
+        },
+        intro:
+          "AI Court Room is Asvara's flagship product — a first-of-its-kind legal simulation and predictive platform that recreates courtroom proceedings and dispute resolution environments using AI. It allows users to test legal strategies, simulate litigation or ADR scenarios, and receive probability-based predictions — all within a dynamic, intelligent chamber.",
+
+        howItWorks: {
+          title: "How It Works",
+          roles: [
+            "Client (Petitioner)",
+            "Respondent (Opposing Party)",
+            "Judge (or Arbitrator/Mediator)",
+          ],
+          description:
+            "Users can assign these roles to either themselves or to AI. For example:",
+          steps: [
+            "Be the Client yourself",
+            "Let the Respondent and Judge be AI",
+            "Upload your documents, arguments, and evidence",
+            "Begin a live legal or ADR simulation",
+          ],
+        },
+
+        coreFeatures: {
+          title: "Core Features",
+          items: [
+            {
+              title: "Legal Argument Simulation",
+              points: [
+                "AI replicates real court scenarios, allowing the user to present arguments while the AI Respondent delivers realistic, legally sound counterarguments.",
+                "The AI Judge moderates the session, ensuring fairness and adherence to procedural law.",
+              ],
+            },
+            {
+              title: "Document & Evidence Review",
+              points: [
+                "Users can upload factual briefs, legal documents, or evidence.",
+                "The AI Judge evaluates the submissions based on relevant laws and precedents.",
+              ],
+            },
+            {
+              title: "Outcome Prediction & Drafting",
+              points: [
+                "At the end of each session, the AI provides a probability-based prediction of how the case may be decided in real courts.",
+                "Detailed memorials and pleadings from both sides.",
+              ],
+            },
+            {
+              title: "ADR Simulations (Mediation, Negotiation & Arbitration)",
+              points: [
+                "Mediation: AI serves as a neutral mediator, facilitating structured dialogue to find common ground.",
+                "Negotiation: AI Respondent negotiates based on goals, constraints, and legal strength — perfect for settlement planning.",
+                "Arbitration: AI acts as an arbitrator, hearing both sides, evaluating evidence, and rendering a reasoned decision.",
+              ],
+            },
+          ],
+        },
+
+        useCases: {
+          title: "Use Cases & Benefits",
+          items: [
+            {
+              title: "Case Outcome Prediction",
+              desc: "Quantify the strength of your case using AI trained on Indian Supreme Court, High Courts and other judgments.",
+            },
+            {
+              title: "Advocacy Practice",
+              desc: "Law students and junior lawyers can practice pleadings, objections, and argument structuring.",
+            },
+            {
+              title: "Argument Refinement",
+              desc: "Check how opposing counsel might respond to your case theory — and improve it.",
+            },
+            {
+              title: "Moot Court & Legal Education",
+              desc: "Automatically generate memorials for both sides for use in competitions or study.",
+            },
+            {
+              title: "Dispute Resolution Training & Practice",
+              desc: "Simulate real-world ADR sessions — with AI facilitating the process in a structured, realistic manner.",
+            },
+          ],
+        },
+        conclusion: [
+          "So, Asvara's AI Court Room is a revolutionary platform designed to simulate courtroom proceedings and alternative dispute resolution (ADR) environments using artificial intelligence. It offers a virtual legal chamber where users can participate in realistic, AI-driven legal scenarios involving a Client, a Respondent, and a Judge.",
+          "What sets this product apart is the flexibility it offers—each role can be played either by a human or an AI. Whether for litigation preparation, strategy testing, skill development, or dispute resolution, AI Court Room delivers a comprehensive and intelligent legal experience like no other product in the Indian legal-tech space.",
+          "The process begins with users uploading relevant documents. The AI Judge reviews these materials following established principles of law and procedure. Once the setup is complete, the platform enters the argument phase where participants engage in a structured legal debate.",
+          "AI Court Room stands at the intersection of legal education, litigation strategy, and AI-powered innovation. It empowers users to test, refine, and elevate their legal skills and case strategies before they step into a real courtroom or ADR forum.",
+        ],
+      },
+      docbare: {
+        hero: {
+          label: "Innovation",
+          title: "DocBare",
+          subtitle: "AI-Powered Contract & Draft Analyzer",
+          description:
+            "DocBare acts as a second pair of expert legal eyes, giving you a comprehensive legal audit of your document before it's filed or signed.",
+          image: "/products/docbare-illustration.png",
+        },
+        intro:
+          "DocBare is an intelligent document review system built to evaluate legal drafts, contracts, and pleadings. It provides a clause-by-clause legal analysis, identifies risks, suggests improvements, and verifies legal coverage.",
+
+        features: [
+          "Clause-by-clause legal analysis",
+          "Risk identification (favorable vs. risky terms)",
+          "Suggestions for additions, removals, or rewording",
+          "Verification of relevant legal grounds",
+        ],
+
+        sections: [
+          {
+            title: "What is DocBare?",
+            content:
+              "DocBare is Asvara's advanced AI solution for reviewing, analyzing, and strengthening legal documents. It is built for lawyers, in-house legal teams, compliance professionals, and even law students who regularly deal with complex contracts, pleadings, and policy drafts. In a field where the smallest clause can have massive consequences, DocBare ensures that no important detail is overlooked. It functions like a senior legal reviewer—meticulously going through each line, evaluating risks, and offering suggestions grounded in legal logic, precedent, and best practices.",
+          },
+          {
+            title: "How DocBare Works",
+            content:
+              "The platform is designed to take a raw draft—whether it's a contract, agreement, petition, or legal notice—and run it through a deep legal analysis engine. DocBare dissects the document clause by clause, checking for legal sufficiency, coherence, and enforceability. It identifies which clauses are in the user's favor, which are neutral, and which may be biased toward the other party. Additionally, it flags missing provisions, vague language, conflicting terms, and compliance gaps. For example, in a vendor agreement, DocBare can point out whether there's a missing indemnity clause, an unclear termination process, or an imbalance in liability terms.",
+          },
+          {
+            title: "Guided Suggestions & Explanations",
+            content:
+              "What makes DocBare uniquely powerful is that it doesn't just critique — it also guides. The platform suggests practical edits, alternative clause language, or additional provisions that should be included based on the purpose of the document and the jurisdiction involved. It contextualizes its feedback with explanations, so users not only know what to change but also understand why it matters. This feature makes DocBare not just a tool for correction, but a resource for learning and legal growth.",
+          },
+          {
+            title: "For Litigation Teams",
+            content:
+              "For litigation teams, DocBare is equally valuable. Lawyers can upload written submissions or court pleadings to receive an evaluation of legal arguments, potential inconsistencies, and whether the proper procedural elements have been included. This real-time review process helps reduce errors before filing and enhances the persuasive power of the document. It also ensures that the arguments align with binding precedents and established legal principles.",
+          },
+          {
+            title: "For Corporate Legal Teams",
+            content:
+              "In corporate legal settings, where hundreds of contracts are often reviewed under tight deadlines, DocBare helps standardize and accelerate the review process. Legal teams can quickly screen vendor agreements, NDAs, MoUs, and service contracts without compromising quality. DocBare not only checks for legal soundness but also assesses risk exposure, making it an invaluable asset in high-volume environments.",
+          },
+          {
+            title: "For Legal Education",
+            content:
+              "Moreover, for legal education and training, DocBare acts as a silent mentor. Law students and interns can upload their drafts and receive professional-grade feedback within minutes. This speeds up the learning curve and builds drafting confidence early in a legal career.",
+          },
+          {
+            title: "Why DocBare?",
+            content:
+              "DocBare bridges the gap between speed and precision—something every legal professional aspires to master. By bringing clarity, consistency, and depth to document review, it ensures that users aren't just producing paperwork, but legally solid, well-structured documents. With DocBare, Asvara is redefining what it means to review a legal draft—turning every review into an opportunity for refinement, risk reduction, and smarter legal outcomes.",
+          },
+        ],
+      },
+    },
+  },
 };
