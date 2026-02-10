@@ -217,4 +217,76 @@ export const content = {
     title: "Documentation",
     subtext: "SAMPLE",
   },
+
+  about: {
+    hero: {
+      label: "Who We Are",
+      title: "About Asvara",
+      subtext:
+        "Revolutionizing legal practice with AI-powered research, drafting, & simulation.",
+    },
+    story: {
+      heading: "Legal expertise meets",
+      headingHighlight: "artificial intelligence.",
+      p1: "At Asvara, we are driven by the belief that the future of legal services lies at the intersection of deep legal expertise and cutting-edge technology.",
+      p2: "Founded with a shared vision to revolutionize legal research, drafting, and decision-making in India and beyond, our mission is to build intelligent tools that empower legal professionals, institutions, and enterprises to work smarter, faster, and more confidently.",
+      quote:
+        "Every tool we build is the result of rigorous legal reasoning, iterative design, and hands-on technical validation.",
+      quoteLabel: "Mission Statement",
+    },
+    founders: {
+      header: "Meet Our Founders",
+      subtext: "Complementary strengths in Law & Technology",
+      list: [
+        {
+          name: "Sajal Anand",
+          title: "Lawyer & Chief Legal Architect",
+          bio: "Sajal leads legal, strategic, and data architecture at Asvara. With deep insight into case law, litigation workflows, and compliance, he curates legal datasets, designs argument frameworks, and embeds ethical reasoning into our models.",
+          image: "/team/sajal.png",
+          link: "https://www.linkedin.com/in/sajal-anand-508993215/",
+        },
+        {
+          name: "Rajat Balyan",
+          title: "Co-Founder, Director & CTO",
+          bio: "Rajat oversees the technology stack, architecture, and ML development. He ensures our platforms are robust, scalable, and secure—powering PleadSmart, Docbare, and AI Court Room with performance and precision.",
+          image: "/team/rajat.png",
+          link: "https://www.linkedin.com/in/rajat-balyan/",
+        },
+      ],
+    },
+    culture: {
+      label: "Our Culture",
+      headline: "Driven by",
+      headlineHighlight: "Collaboration.",
+      desc: "We don't believe in building technology for its own sake—we are here to solve real-world legal problems. Our team operates on principles of transparency, ownership, and empathy.",
+      values: [
+        {
+          icon: "Handshake",
+          title: "Collaboration",
+          desc: "We build together, valuing every perspective.",
+        },
+        {
+          icon: "Lightbulb",
+          title: "Curiosity",
+          desc: "We question, explore, and innovate relentlessly.",
+        },
+        {
+          icon: "Shield",
+          title: "Ownership",
+          desc: "We take initiative and deliver with integrity.",
+        },
+        {
+          icon: "Rocket",
+          title: "Impact",
+          desc: "Democratizing legal intelligence for everyone.",
+        },
+      ],
+    },
+    cta: {
+      header: "Join the Movement",
+      desc: "Be the first to try our AI legal tools. Request early access or join our team to shape the future of law.",
+      btnPrimary: "Get Early Access",
+      btnSecondary: "Join Our Team",
+    },
+  },
 };

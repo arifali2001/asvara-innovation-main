@@ -3,6 +3,7 @@ import { Cormorant_Garamond, Poppins, Inter } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "@/components/animations/LenisScroll";
 import CustomCursor from "@/components/animations/CustomCursor";
+import GrainOverlay from "@/components/ui/grainderOverlay";
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
@@ -42,6 +43,7 @@ export default function RootLayout({
       <body
         className={`${cormorant.variable} ${poppins.variable} ${inter.variable} font-sans antialiased`}
       >
+        <GrainOverlay />
         <CustomCursor />
         <SmoothScroll />
         {children}
