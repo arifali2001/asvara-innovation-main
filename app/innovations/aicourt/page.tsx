@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Cormorant_Garamond, Poppins } from "next/font/google";
 import {
   CheckCircle2,
   ArrowLeft,
@@ -20,47 +19,11 @@ import LetterRevealBlur from "@/components/animations/LetterRevealBlur";
 import Parallax from "@/components/animations/Parallax";
 import ScrollTextReveal from "@/components/animations/ScrollTextReveal";
 import { textPresets, parallaxPresets } from "@/config/animationPresets";
-
-// Fonts
-const cormorant = Cormorant_Garamond({
-  subsets: ["latin"],
-  weight: ["300", "400", "600", "700"],
-  display: "swap",
-});
-
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
-  display: "swap",
-});
+import { theme } from "@/config/theme";
+import { cormorant, poppins } from "@/config/fonts";
 
 export default function AICourtPage() {
   const data = content.innovations.pages.aicourt;
-
-  // --- global theme config ---
-  const theme = {
-    colors: {
-      bg: "bg-[#e8dfd5]",
-      primary: "text-[#292929]",
-      secondary: "text-[#4a4a4a]",
-      muted: "text-[#5a5a5a]",
-      accent: "text-[#8b7355]",
-      border: "border-[#292929]/10",
-      cardBg: "bg-[#f5f3f1]",
-    },
-    text: {
-      heroTitle: `text-5xl md:text-7xl leading-tight font-bold ${cormorant.className}`,
-      sectionHeading: `text-3xl md:text-4xl leading-tight font-bold ${cormorant.className}`,
-      subHeading: `text-xl md:text-2xl font-semibold ${cormorant.className}`,
-      cardTitle: `text-lg font-bold ${cormorant.className}`,
-      bodyMain: `text-lg font-semibold leading-relaxed ${poppins.className}`,
-      label: `text-xs font-bold tracking-[0.2em] uppercase ${poppins.className}`,
-    },
-    layout: {
-      section: "py-20 relative",
-      container: "max-w-4xl mx-auto px-6 relative z-10",
-    },
-  };
 
   return (
     <main

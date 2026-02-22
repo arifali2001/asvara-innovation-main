@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Cormorant_Garamond, Poppins } from "next/font/google";
 import { ArrowRight, Clock, Calendar } from "lucide-react";
 import { content } from "@/config/content";
 
@@ -10,46 +9,10 @@ import FadeIn from "@/components/animations/FadeIn";
 import LetterRevealBlur from "@/components/animations/LetterRevealBlur";
 import Parallax from "@/components/animations/Parallax";
 import { textPresets, parallaxPresets } from "@/config/animationPresets";
-
-const cormorant = Cormorant_Garamond({
-  subsets: ["latin"],
-  weight: ["300", "400", "600", "700"],
-  display: "swap",
-});
-
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
-  display: "swap",
-});
+import { theme } from "@/config/theme";
 
 export default function InnovationsPage() {
   const { innovations } = content;
-
-  // --- Global theme configs ---
-  const theme = {
-    colors: {
-      bg: "bg-[#e8dfd5]",
-      primary: "text-[#292929]",
-      secondary: "text-[#4a4a4a]",
-      muted: "text-[#5a5a5a]",
-      accent: "text-[#8b7355]",
-      border: "border-[#292929]/10",
-      cardBg: "bg-[#f5f3f1]",
-    },
-    text: {
-      heroTitle: `text-5xl md:text-7xl leading-tight font-bold ${cormorant.className}`,
-      sectionHeading: `text-3xl md:text-4xl leading-tight font-bold ${cormorant.className}`,
-      cardTitle: `text-2xl font-bold ${cormorant.className}`,
-      bodyMain: `text-base font-light leading-relaxed ${poppins.className}`,
-      bodySmall: `text-sm leading-relaxed ${poppins.className}`,
-      label: `text-xs font-bold tracking-[0.2em] uppercase ${poppins.className}`,
-    },
-    layout: {
-      section: "py-20 relative overflow-hidden",
-      container: "max-w-7xl mx-auto px-6 relative z-10",
-    },
-  };
 
   return (
     <main

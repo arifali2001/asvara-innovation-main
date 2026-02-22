@@ -241,20 +241,14 @@ export default function DynamicNavbar() {
               ))}
             </div>
 
-            <div className="nav-pill-item absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center gap-2 pointer-events-none select-none">
+            <div className="nav-pill-item absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center pointer-events-none select-none">
               <Image
                 src="/logo-hex.svg"
                 alt={brand.logoAlt}
-                width={24}
-                height={24}
-                className="w-6 h-6 object-contain"
+                width={28}
+                height={28}
+                className="w-7 h-7 object-contain"
               />
-              <span
-                className="font-bold text-lg tracking-tight text-[#292929]"
-                style={{ fontFamily: "var(--font-primary)" }}
-              >
-                {brand.name}
-              </span>
             </div>
 
             <div className="nav-pill-item ml-auto">

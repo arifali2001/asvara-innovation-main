@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Cormorant_Garamond, Poppins } from "next/font/google";
 import {
   Handshake,
   Lightbulb,
@@ -16,18 +15,8 @@ import FadeIn from "@/components/animations/FadeIn";
 import LetterRevealBlur from "@/components/animations/LetterRevealBlur";
 import Parallax from "@/components/animations/Parallax";
 import { textPresets, parallaxPresets } from "@/config/animationPresets";
-
-const cormorant = Cormorant_Garamond({
-  subsets: ["latin"],
-  weight: ["300", "400", "600", "700"],
-  display: "swap",
-});
-
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
-  display: "swap",
-});
+import { theme } from "@/config/theme";
+import { cormorant, poppins } from "@/config/fonts";
 
 const IconMap: any = {
   Handshake: Handshake,
@@ -38,34 +27,6 @@ const IconMap: any = {
 
 export default function AboutPage() {
   const { about } = content;
-
-  // --- Global Styling Theme ---
-  const theme = {
-    colors: {
-      bg: "bg-[#e8dfd5]",
-      primary: "text-[#292929]",
-      secondary: "text-[#4a4a4a]",
-      muted: "text-[#5a5a5a]",
-      accent: "text-[#8b7355]",
-      border: "border-[#292929]/10",
-      cardBg: "bg-[#f5f3f1]",
-    },
-    text: {
-      heroTitle: `text-5xl md:text-7xl leading-tight font-bold ${cormorant.className}`,
-      sectionHeading: `text-3xl md:text-4xl leading-tight font-bold ${cormorant.className}`,
-      sectionSubtext: `font-light text-sm tracking-wide ${poppins.className}`,
-      cardTitle: `text-2xl font-bold ${cormorant.className}`,
-      bodyMain: `text-base font-light leading-relaxed ${poppins.className}`,
-      bodySmall: `text-sm leading-relaxed ${poppins.className}`,
-      label: `text-xs font-bold tracking-[0.2em] uppercase ${poppins.className}`,
-      quote: `text-lg md:text-2xl leading-relaxed italic ${cormorant.className}`,
-    },
-    layout: {
-      section: "py-20 relative overflow-hidden",
-      sectionLarge: "py-24 md:py-32 relative",
-      container: "max-w-7xl mx-auto px-6 relative z-10",
-    },
-  };
 
   return (
     <main
